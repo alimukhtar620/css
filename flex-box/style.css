@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* flex makes its children participate in flex layout
+    flex layout arranges elements in one direction either horizontal or vertical
+    only direct children of an element participate in flex layout
+*/
+.container {
+    border: 1px solid black;
+    /* any parent elements default height is defined by its children's height */
+    height: 1000px;
+    display: flex;
+
+    /* default value of flex direction is row */
+    /* flex-direction: row; */
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+    
+    /* flex wrap allows our elements to wrap onto next line when there is not enough space */
+    /* default value of flex wrap is no-wrap so elements do not move to next line */
+    /* flex-wrap: wrap; */
+
+    /* flex flow is shorthand, first value specifies flex direction and second specifies wrap */
+    /* flex-flow: column wrap; */
+
+    /* main axis is defined by flex direction and justify content arranges elements on main axis */
+    /* justify-content: center; */
+    /* default value of justify content is flex start */
+    /* justify-content: flex-start; */
+    /* justify-content: flex-end; */
+    /* justify-content: space-between; */
+    /* justify-content: space-around; */
+    /* justify-content: space-evenly; */
+
+    /* align items arranges elements on secondary axis */
+    /* default values of align items is stetch and works only if child element do not have a height or width specified */
+    /* align-items: stretch; */
+    /* align-items: center; */
+    /* align-items: flex-start; */
+    /* align-items: flex-end; */
+
+    /* align-content arranges our content when wrapped according to the main axis, align-content does not work without 
+        flex-wrap enabled
+    */
+
+    /* align-content: space-around; */
+    /* align-content: space-evenly; */
+    /* align-content: space-between; */
+    /* align-content: center; */
+    /* align-content: flex-start;   */
+    /* align-content: flex-end; */
+}
+
+
+.box1, .box2, .box3, .box4  {
+    height: 200px;
+    width: 200px;
+    font-size: 1.5rem;
+}
+
+
+/* 
+    order defines the order of your child elements within flex parent
+    higher order children move to the end of main axis
+*/
+
+/* flex-basis defines the default size of an element before the remaining space is distributed */
+/* flex shrink defines the ability for a flex item to shrink if necessary, opposite of flex basis, default value is 1 */
+.box1 {
+    background-color: yellow;
+    /* flex-basis: 400px; */
+    /* flex-grow: 1; */
+    /* flex-shrink: 2; */
+
+    /* flex is shorthand for flex-grow, flex-shrink, flex-basis */
+    /* flex: 1 2 400px */
+}
+
+.box2 {
+    background-color: aqua;
+    /* order: 1; */
+}
+
+.box3 {
+    background-color: brown;
+    /* align self is used to align a single child element */
+    align-self: center;
+}
+
+.box4 {
+    background-color: blue;
+    order: 2;
+}
